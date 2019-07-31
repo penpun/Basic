@@ -1,0 +1,86 @@
+import React from 'react';
+import { StyleSheet, Text, View, Button,TouchableOpacity,TextInput,Image } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient'
+
+export default class App extends React.Component {
+  render() {
+    return (
+
+      <LinearGradient
+        colors={['#2980b9','#6dd5fa','#ffffff']}
+        style={{flex: 1}}
+      >
+
+      <Button title = 'OK1' />
+      <View style= {{flex:1, backgroundColor: 'bluesky'}}>
+        <View style= {{alignItems: 'center'}} >
+        <Image  style={styles.pic1}
+        source={{ uri:'https://sv1.picz.in.th/images/2019/07/31/KrlRfn.png'}}>    </Image></View>
+
+        
+        
+
+        
+        <TextInput style={styles.txtIn2} placeholder = "login" ></TextInput>
+        <TextInput style={styles.txtIn2} placeholder = "Passwd" secureTextEntry = {true} ></TextInput>
+
+        <TouchableOpacity  style = {styles.btn3}> <Text>OK</Text></TouchableOpacity>
+      </View>
+    </LinearGradient>
+    );
+
+  }
+}
+
+
+const styles = StyleSheet.create({
+    btn3 : {    
+    alignItems: 'center',
+      height:50,
+      backgroundColor: '#3b5998',
+      padding: 10,
+      margin:10,
+      borderRadius: 50},
+
+  btn4:{
+      alignItems: 'center',
+      height:50,
+      backgroundColor: 'transparent',
+      padding: 10,
+      margin:10,
+      borderRadius: 50,
+      borderColor:'white',
+      borderWidth : 1
+    },
+  txtIn1: {
+    alignItems: 'center',
+    height:50,
+    backgroundColor: 'white',
+    padding: 10,
+    margin:10
+  },
+
+  txtIn2:{
+      alignItems: 'center',
+      height:50,
+      backgroundColor: 'transparent',
+      padding: 10,
+      margin:10,
+      borderRadius: 50,
+      borderColor:'white',
+      borderWidth : 1
+  },
+
+  pic1 : {
+      alignItems: 'center',
+      height:100,
+      width : 100,
+      backgroundColor: 'transparent',
+      padding: 10,
+      margin:10
+  }
+
+})
+
+
+
